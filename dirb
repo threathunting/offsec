@@ -1,0 +1,9 @@
+Use dirb to bruteforce password protected web directories
+http://git.kali.org/gitweb/?p=packages/dirb.git;a=summary
+
+
+mkdir /usr/share/dirb/
+cd /usr/share/dirb
+wget http://sourceforge.net/projects/dirb/files/latest/download?source=files
+tar -xvzf dirb222.tar.gz
+dirb http://IP:PORT dirbuster-ng-master/wordlists/common.txt
