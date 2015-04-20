@@ -1,0 +1,10 @@
+nikto as a web server scanner - open source replacement for netsparker, acunetix, et.al.
+You might be better off using Burp (free version) and seeing what you get.
+This is the equivalent of using a sword to fight a fly.
+https://cirt.net/Nikto2
+
+mkdir /usr/share/nikto
+cd /usr/share/nikto
+wget https://github.com/sullo/nikto/archive/master.zip
+tar -xvzf master.zip
+nikto -C all -h http://IPAddress
