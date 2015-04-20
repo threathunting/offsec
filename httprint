@@ -1,0 +1,8 @@
+httprint is a lightweight web server fingerprinting tool which does NOT rely on the server banner
+
+mkdir /usr/share/httprint
+cd /usr/share/httprint
+wget http://www.net-square.com/_assets/httprint_linux_301.zip
+unzip httprint_linux_301.zip
+cd httprint_301/linux
+./httprint -h http://<URL> -s signatures.txt
