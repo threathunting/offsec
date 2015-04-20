@@ -1,0 +1,10 @@
+mkdir /usr/share/skipfish
+cd /usr/share/skipfish
+wget http://skipfish.googlecode.com/files/skipfish-2.10b.tgz
+tar -xvzf skipfish-2.10b.tgz
+cd skipfish-2.10b
+skipfish -m 5 -L -W- -o output_dir -b ie -B <URL>.com http://www.<URL>.com/
+
+Five-connection crawl, but no brute-force; 
+pretending to be MSIE and caring less about ambiguous MIME or character set mismatches, 
+and trusting <URL>.com links
