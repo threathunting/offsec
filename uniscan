@@ -7,3 +7,9 @@ wget http://sourceforge.net/projects/uniscan/files/latest/download?source=typ_re
 tar -xvzf uniscan6.2.tar.gz
 cd uniscan6.2
 uniscan -u <URL> -qweds
+
+-q – Enable Directory checks
+-w – Enable File checks
+-e – Enable robots.txt and sitemap.xml checks
+-d – Enable Dynamic checks
+-s – Enable Static checks
