@@ -1,0 +1,9 @@
+WPScan is a ruby tool to enumerate wordpress vulnerabilities
+
+mksir /usr/share/wpscan
+cd /usr/share/wpscan
+wget https://github.com/wpscanteam/wpscan/tarball/master
+tar -xvzf wpscanteam-wpscan-2.7-25-g7ebfe42.tar
+cd wpscanteam-wpscan-2.7-25-g7ebfe42.tar
+wpscan --update
+wpscan --url http://<URL> --enumerate p
