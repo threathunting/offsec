@@ -1,0 +1,12 @@
+Using nmap as a vulnerability scanner, when you don't have the option to run Nessus and OpenVAS.
+
+mkdir /usr/share/nmap/scripts/vulscan
+cd /usr/share/nmap/scripts/vulscan
+wget http://www.computec.ch/projekte/vulscan/download/nmap_nse_vulscan-2.0.tar.gz
+tar xzf nmap_nse_vulscan-2.0.tar.gz
+nmap -sS -sV –script=vulscan/vulscan.nse <target>
+nmap -sS -sV –script=vulscan/vulscan.nse –script-args vulscandb=scipvuldb.csv <target>
+nmap -sS -sV –script=vulscan/vulscan.nse –script-args vulscandb=scipvuldb.csv -p80 <target>
+nmap -PN -sS -sV –script=vulscan –script-args vulscancorrelation=1 -p80 <target>
+nmap -sV –script=vuln <target>
+nmap -PN -sS -sV –script=all –script-args vulscancorrelation=1 <target>
