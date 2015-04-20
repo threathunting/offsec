@@ -1,4 +1,5 @@
-httprint is a lightweight web server fingerprinting tool which does NOT rely on the server banner. Does not work if the server blocks ICMP.
+httprint is a lightweight web server fingerprinting tool which does NOT rely on the server banner. 
+Does not work if the server blocks ICMP.
 
 mkdir /usr/share/httprint
 cd /usr/share/httprint
