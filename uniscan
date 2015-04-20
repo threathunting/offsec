@@ -1,0 +1,9 @@
+uniscan is a simple RFI, LFI and RCE scanner
+http://sourceforge.net/projects/uniscan/?source=navbar
+
+mkdir /usr/share/uniscan
+cd /usr/share/uniscan
+wget http://sourceforge.net/projects/uniscan/files/latest/download?source=typ_redirect
+tar -xvzf uniscan6.2.tar.gz
+cd uniscan6.2
+uniscan -u <URL> -qweds
