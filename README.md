@@ -1,4 +1,4 @@
-Exploit-Code
+OFFSEC
 ============
 
-Random collection of exploit code
+Random collection of exploit code, tools, scripts, etc.
