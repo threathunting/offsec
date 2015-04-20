@@ -5,6 +5,6 @@ https://cirt.net/Nikto2
 
 mkdir /usr/share/nikto
 cd /usr/share/nikto
-wget https://github.com/sullo/nikto/archive/master.zip
+wget https://cirt.net/nikto/nikto-2.1.5.tar.gz
 tar -xvzf master.zip
 nikto -C all -h http://IPAddress
