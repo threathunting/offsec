@@ -1,0 +1,7 @@
+nikto is a very powerful open-source web server scanner. 
+
+mkdir /usr/share/nikto
+cd /usr/share/nikto
+wget https://cirt.net/nikto/nikto-2.1.5.tar.gz
+tar -xvzf nikto-2.1.5.tar.gz
+nikto -C all -h http://<IPAddress>
