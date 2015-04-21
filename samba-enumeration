@@ -1,4 +1,4 @@
 nmblookup -A <IPAddress>
 smbclient //MOUNT/share -I <IPAddress> -N
-rpcclient -U “” <IPAddress>
+rpcclient -U "" <IPAddress>
 enum4linux <IPAddress>
