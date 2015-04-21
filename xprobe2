@@ -1,0 +1,11 @@
+sudo apt-get install libpcap0.8-dev
+sudo apt-get install g++-4.1
+mkdir /usr/share/xprobe2
+cd /usr/share/xprobe2
+wget http://downloads.sourceforge.net/project/xprobe/xprobe2/Xprobe2%200.3/xprobe2-0.3.tar.gz
+tar -xvzf xprobe2-0.3.tar.gz
+cd xprobe2-0.3
+./configure CC=gcc-4.1 CXX=g++-4.1
+make
+sudo make install
+xprobe2 -v -p tcp:80:open <IPAddress>
