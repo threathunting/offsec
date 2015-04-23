@@ -12,6 +12,7 @@ find / -group root -perm -2000 -print
  
 Find all SUID and SGID files owned by anyone:
 find / -perm -4000 -o -perm -2000 -print
+find / -type f \( -perm -04000 -o -perm -02000 \)
  
 Find all files that are not owned by any user:
 find / -nouser -print
@@ -21,3 +22,12 @@ find / -nogroup -print
  
 Find all symlinks and what they point to:
 find / -type l -ls
+
+World-writable files, particularly system files, can be a security hole 
+find / -perm -2 ! -type l -ls
+
+Unowned files may also be an indication an intruder has accessed your system.
+find / \( -nouser -o -nogroup \) -print
+
+.rhosts files should not be permitted on your system
+find /home -name .rhosts -print
