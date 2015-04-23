@@ -1,0 +1,8 @@
+Use this to enable remote admin / remote desktop on your windows machine
+
+reg add “hklm\system\currentcontrolset\control\terminal server” /f /v DenyTSConnections /t REG_DWORD /d 0
+netsh firewall set service remoteadmin enable
+netsh firewall set service remotedesktop enable
+ 
+Use this to completely disable the firewall - Be careful because this might catch the attention of the user
+netsh firewall set opmode disable
