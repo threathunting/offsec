@@ -1,0 +1,23 @@
+SUID and SGID files on your system are a potential security risk, and should be monitored closely. 
+Because these programs grant special privileges to the user who is executing them, it's necessary to ensure that insecure programs are not installed. 
+A favorite trick of crackers is to exploit SUID-root programs, then leave a SUID program as a back door to get in the next time, even if the original hole is plugged.
+
+If you need to find files that have their SUID or SGID bit set, do this.
+
+Find all SUID root files:
+find / -user root -perm -4000 -print
+ 
+Find all SGID root files:
+find / -group root -perm -2000 -print
+ 
+Find all SUID and SGID files owned by anyone:
+find / -perm -4000 -o -perm -2000 -print
+ 
+Find all files that are not owned by any user:
+find / -nouser -print
+ 
+Find all files that are not owned by any group:
+find / -nogroup -print
+ 
+Find all symlinks and what they point to:
+find / -type l -ls
