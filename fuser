@@ -1,0 +1,10 @@
+To find who is using a particular TCP port or a file in Linux use the fuser command
+
+What PIDs are using Port 80
+fuser -nv tcp 80
+
+What PIDs are using Port 80 in IPv6
+fuser -v -n tcp -6 80
+
+Kill any process thats using Port 80
+fuser -k -i tcp 80
